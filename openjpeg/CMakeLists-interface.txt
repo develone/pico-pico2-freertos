@@ -1,0 +1,30 @@
+add_library(openjpeg INTERFACE)
+target_include_directories(openjpeg INTERFACE ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib)
+target_sources(openjpeg INTERFACE
+ 
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/bio.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/bio.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/cio.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/cio.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/dwt.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/dwt.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/event.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/event.h
+
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/function_list.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/function_list.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/image.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/image.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/invert.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/invert.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/j2k.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/j2k.h
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/mct.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/mct.c 
+ 
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/openjpeg.c
+    ${CMAKE_CURRENT_LIST_DIR}/openjpeg-lib/openjpeg.h 
+)
+
+
+

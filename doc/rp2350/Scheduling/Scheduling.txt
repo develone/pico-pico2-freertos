@@ -1,0 +1,18 @@
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/ttyUSB0, 06:55:44
+
+Press CTRL-A Z for help on special keys
+
+Running on RP2350 
+Task 2 is currently running
+Task 1 is currently running
+Task 2 is currently running
+Task 1 is currently running
+Task 2 is currently running
+Task 1 is currently running
+Task 2 is currently running
+Task 1 is currently running
+Task 2 is currently running
+Task 1 is currently running

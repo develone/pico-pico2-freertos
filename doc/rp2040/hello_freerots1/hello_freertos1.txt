@@ -1,0 +1,14 @@
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/ttyUSB0, 10:01:05
+
+Press CTRL-A Z for help on special keys
+
+Running on RP2040 
+Starting FreeRTOS on core 0:
+Hello from worker count=0
+Hello from main task count=0
+blink_task starts
+Hello from main task count=1
+Hello from main task count=2

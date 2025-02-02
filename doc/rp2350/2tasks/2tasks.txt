@@ -1,0 +1,16 @@
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/ttyUSB0, 07:19:04
+
+Press CTRL-A Z for help on special keys
+
+Running on RP2350 
+LED is ON! 
+LED is OFF! 
+LED is ON! 
+LED is OFF! 
+LED is ON! 
+LED is OFF! 
+LED is ON! 
+LED is OFF! 

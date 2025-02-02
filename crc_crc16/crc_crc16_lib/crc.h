@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Filename: 	crc.h
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef	CRC_H
+#define	CRC_H
+
+extern unsigned char getCRCForByte(unsigned char val);
+extern void buildCRCTable();
+extern unsigned char getCRC(unsigned char message[], unsigned char length);
+
+#endif

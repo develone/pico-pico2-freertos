@@ -1,0 +1,52 @@
+01/14/2025
+Several env variables need to be setup
+	export PICO_SDK_PATH=/home/devel/pico2/pico-sdk
+	export FREERTOS_KERNEL_PATH=/home/devel/pico2/freertos-lib/FreeRTOS-Kernel
+	export PICO_EXTRAS_PATH=/home/devel/pico-extras
+	export PIPELINEC_REPO="$HOME/PipelineC"
+	export OSS_CAD_SUITE=$HOME/oss-cad-suite/
+	export PICTOOL_FETCH_FROM_GITHUB=/home/devel/pico2/BUILT_PICOTOOL
+
+Starting from git@github.com:develone/rp2040-freertos-project.git dev branch Uses FreeRTOS-Kernel 
+from Raspberry Pi repo https://github.com/raspberrypi/FreeRTOS-Kernel.git
+
+steps for using repo https://github.com/develone/rp2040-rp2350-freertos.git 
+devel@pi5-90:~/rp2350-freeRTOS/build $ echo $FREERTOS_KERNEL_PATH
+/home/devel/pico2/freertos-lib/FreeRTOS-Kernel
+	cd pico2
+	git clone https://github.com/develone/rp2040-rp2350-freertos.git
+	cd FreeRTOS-Kernel
+	cd ..
+	git clone https://github.com/develone/pico-sdk.git -b my-2.1.0
+	cd pico-sdk	
+	git submodules update --init
+	cd ../BUILT_PICOTOOL/
+	git clone https://github.com/raspberrypi/picotool.git
+	mkdir build 
+	cd build
+	cmake ../
+	sudo make install
+	cd ~/
+	git clone https://github.com/develone/rp2040-rp2350-freertos.git
+	cd ~/rp2040-rp2350-freertos
+	./compile-rp2350.sh
+	or
+	./compile-rp2350.sh
+	mkdir build-rp2040
+	find . -name *.uf2 | wc
+	37      37    1614
+
+**************************
+	mkdir build-rp2350
+	cd build-rp2350
+	cmake .. -DPICO_BOARD=pico2 -DPICO_PLATFORM=rp2350 
+	make 
+	or
+	make VERBOSE=1 > make_output.txt 2>&1
+	cd build-rp2040
+	cmake .. -DPICO_BOARD=pico -DPICO_PLATFORM=rp2040 
+	make 
+	or
+	make VERBOSE=1 > make_output_rp2040.txt 2>&1
+
+ This repo is for both the RP2040 & RP2350

@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.12)
+
+include(pico_sdk_import.cmake)
+
+project(Pico-FreeRTOS)
+
+pico_sdk_init()
+add_subdirectory(xmodem)
+add_subdirectory(pico-littlefs)
+add_subdirectory(littlefs)
+add_subdirectory(cir-buf)
+add_subdirectory(crc_crc16)
+add_subdirectory(rp2040-logic-analyzer)
+add_subdirectory(i2c)
+add_subdirectory(klt)
+add_subdirectory(klt-test)
+add_subdirectory(first_pwm)
+add_subdirectory(HCSR04)
+add_subdirectory(pico-lifting-sf)
+add_subdirectory(pico-lifting)
+add_subdirectory(lifting)
+#add_subdirectory(ProjectFiles)
+add_subdirectory(openjpeg)
+add_subdirectory(freertos)
+#add_subdirectory(2cores)
+

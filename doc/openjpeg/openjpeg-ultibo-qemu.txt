@@ -1,0 +1,23 @@
+git clone https://github.com/develone/Ultibo_Projects.git
+cd ~/Ultibo_Projects/jpeg2000/src
+./compile_ultibo.sh
+cd ../QEMU
+./libbuild.sh
+Using Lazarus-Ultibo-Edition
+
+./startqemu.sh
+git clone https://github.com/develone/openjpeg.git -b ultibo t_ultibo
+cd t_ultibo
+mkdir build
+cd build
+cmake ..
+make
+cd bin
+./opj_compress -i ~/Ultibo_Projects/jpeg2000/QEMU/lena_rgb_256.bmp -r 75 -o test-75.j2k
+./opj_decompress -i test-75.j2k -o test-75.bmp
+./opj_compress -i ~/Ultibo_Projects/jpeg2000/QEMU/lena_rgb_256.bmp -r 150 -o test-150.j2k
+./opj_decompress -i test-150.j2k -o test-150.bmp
+./opj_compress -i ~/Ultibo_Projects/jpeg2000/QEMU/lena_rgb_256.bmp -r 200 -o test-200.j2k
+./opj_decompress -i test-200.j2k -o test-200.bmp
+./opj_compress -i ~/Ultibo_Projects/jpeg2000/QEMU/lena_rgb_256.bmp -r 250 -o test-250.j2k
+./opj_decompress -i test-250.j2k -o test-250.bmp

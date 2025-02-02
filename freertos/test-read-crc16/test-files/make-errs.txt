@@ -1,0 +1,18 @@
+[  1%] Built target bs2_default
+[  1%] Performing build step for 'ELF2UF2Build'
+[100%] Built target elf2uf2
+[  1%] No install step for 'ELF2UF2Build'
+[  1%] Completed 'ELF2UF2Build'
+[  1%] Built target ELF2UF2Build
+[  1%] Built target bs2_default_padded_checksummed_asm
+[  5%] Built target example2
+[  9%] Built target example1
+[ 13%] Built target example0
+[ 13%] Built target crc16
+[ 19%] Built target rp2040-logic-analyzer
+[ 20%] Built target freertos
+[ 20%] Built target klt
+[ 20%] Built target crc
+[ 20%] Built target lifting
+[ 25%] Built target test-read
+[ 25%] Building C object test-read-crc16/CMakeFiles/test-read-crc16.dir/main.c.obj

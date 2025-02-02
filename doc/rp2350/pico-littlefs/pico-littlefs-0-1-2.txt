@@ -1,0 +1,113 @@
+example0.uf2
+devel@pi5-90:~ $ minicom myusb0 
+
+format (N/y) ? 
+FS: blocks 64, block size 4096, used 2
+Boot count: 1
+File size (should be 4) : 4
+
+
+
+example1.uf2
+devel@pi5-90:~ $ minicom myusb0 
+Hit any key
+File list
+.
+..
+boot_count
+End of list
+Creating 32 files
+File list
+.
+..
+11086282596.tst
+11131774259.tst
+11134519721.tst
+11159678392.tst
+11255903633.tst
+11410932295.tst
+1154866954.tst
+11573908997.tst
+11629436278.tst
+11646566880.tst
+11734980231.tst
+11746841065.tst
+11874488172.tst
+11885772828.tst                                                                 
+11904406061.tst                                                                 
+11932629191.tst                                                                 
+12062972839.tst                                                                 
+12129434355.tst                                                                 
+12147260458.tst                                                                 
+1282962927.tst                                                                  
+1293130104.tst                                                                  
+1382971559.tst                                                                  
+152650143.tst                                                                   
+1569326942.tst                                                                  
+1642008697.tst                                                                  
+1735430261.tst                                                                  
+1758014368.tst                                                                  
+1777190218.tst                                                                  
+1780581502.tst                                                                  
+1821919613.tst                                                                  
+1921421196.tst                                                                  
+1989347765.tst                                                                  
+boot_count                                                                      
+End of list                                                                     
+FS: blocks 64, block size 4096, used 2                                          
+Renaming 32 files                                                               
+File list                                                                       
+.                                                                               
+..                                                                              
+21086301339.tst                                                                 
+21131773644.tst                                                                 
+21134533206.tst                                                                 
+21159706183.tst                                                                 
+21255894638.tst                                                                 
+21410982328.tst                                                                 
+2154921717.tst                                                                  
+21573850618.tst                                                                 
+21629472393.tst                                                                 
+21646551583.tst                                                                 
+21734954360.tst                                                                 
+21746817558.tst                                                                 
+21874498707.tst                                                                 
+21885758435.tst                                                                 
+21904349650.tst                                                                 
+21932618552.tst                                                                 
+22062977112.tst                                                                 
+22129422604.tst                                                                 
+22147248085.tst                                                                 
+2282940432.tst                                                                  
+2293089415.tst                                                                  
+2382947672.tst                                                                  
+252666208.tst                                                                   
+2569361057.tst                                                                  
+2642038150.tst                                                                  
+2735394186.tst                                                                  
+2758029919.tst                                                                  
+2777127093.tst                                                                  
+2780551553.tst                                                                  
+2821919874.tst                                                                  
+2921385587.tst                                                                  
+2989380682.tst                                                                  
+boot_count                                                                      
+End of list                                                                     
+FS: blocks 64, block size 4096, used 2                                          
+Verifying then removing 32 files                                                
+File list                                                                       
+.                                                                               
+..                                                                              
+boot_count                                                                      
+End of list                                                                     
+FS: blocks 64, block size 4096, used 2                                          
+Pass 
+example2.uf2
+Hit any key
+FS: blocks 64, block size 4096, used 2
+Creating 200K file
+FS: blocks 64, block size 4096, used 53
+reading 200K file
+removing file
+FS: blocks 64, block size 4096, used 2
+Pass
