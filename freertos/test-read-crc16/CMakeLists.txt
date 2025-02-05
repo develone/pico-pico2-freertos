@@ -16,7 +16,10 @@ target_link_libraries(${TARGET_NAME} PRIVATE
 	cir-buf 
 	klt
 	littlefs 
-	openjpeg)
+	openjpeg
+	hardware_dma
+	hardware_pio
+	spi-ram-emu)
 if(PICO_CYW43_SUPPORTED)
     # For led support on pico_w
     target_link_libraries(${TARGET_NAME} PRIVATE

@@ -5,6 +5,7 @@ include(pico_sdk_import.cmake)
 project(Pico-FreeRTOS)
 
 pico_sdk_init()
+add_subdirectory(spi-ram-emu)
 add_subdirectory(xmodem)
 add_subdirectory(pico-littlefs)
 add_subdirectory(littlefs)

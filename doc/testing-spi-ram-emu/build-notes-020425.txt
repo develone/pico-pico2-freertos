@@ -1,0 +1,46 @@
+Created a new testing branch https://github.com/develone/pico-pico2-freertos/tree/test-spi-ram-emu
+
+git clone git@github.com:develone/pico-pico2-freertos.git -b test-spi-ram-emu
+
+mkdir build-rp2350
+
+cd build-rp2350/
+
+devel@pi5-90:~/pico-pico2-freertos/build-rp2350 $ cmake .. -DPICO_BOARD=pico2 -DPICO_PLATFORM=rp2350
+
+Using PICO_SDK_PATH from environment ('/home/devel/pico2/pico-sdk')
+PICO_SDK_PATH is /home/devel/pico2/pico-sdk
+Target board (PICO_BOARD) is 'pico2'.
+Using board configuration from /home/devel/pico2/pico-sdk/src/boards/include/boards/pico2.h
+Pico Platform (PICO_PLATFORM) is 'rp2350-arm-s'.
+-- Defaulting build type to 'Release' since not specified.
+Defaulting compiler (PICO_COMPILER) to 'pico_arm_cortex_m33_gcc' since not specified.
+Configuring toolchain based on PICO_COMPILER 'pico_arm_cortex_m33_gcc'
+Defaulting PICO_GCC_TRIPLE to 'arm-none-eabi'
+-- The C compiler identification is GNU 12.2.1
+-- The CXX compiler identification is GNU 12.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/arm-none-eabi-gcc
+Build type is Release
+-- Found Python3: /usr/bin/python3 (found version "3.11.2") found components: Interpreter 
+TinyUSB available at /home/devel/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
+BTstack available at /home/devel/pico2/pico-sdk/lib/btstack
+cyw43-driver available at /home/devel/pico2/pico-sdk/lib/cyw43-driver
+lwIP available at /home/devel/pico2/pico-sdk/lib/lwip
+mbedtls available at /home/devel/pico2/pico-sdk/lib/mbedtls
+Using FREERTOS_KERNEL_PATH from environment ('/home/devel/pico2/freertos-lib/FreeRTOS-Kernel')
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/devel/pico-pico2-freertos/build-rp2350
+
+make VERBOSE=1 > make_output.txt 2>&1
