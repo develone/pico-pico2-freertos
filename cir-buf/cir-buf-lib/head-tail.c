@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 char * bump_head(char * head, char * endofbuf,char * topofbuf) {
  
 	if(head == endofbuf) {
