@@ -43,7 +43,7 @@ struct PTRs {
 
 unsigned char tt[128];
 const char src[] = "Hello, world! ";
-const short int a[]; 
+const short int a[0]; 
 
 //const unsigned char CRC7_POLY = 0x91;
 unsigned char CRCTable[256];
