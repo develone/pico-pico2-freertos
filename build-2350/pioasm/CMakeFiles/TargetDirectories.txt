@@ -1,7 +1,0 @@
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/pioasm.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/edit_cache.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/rebuild_cache.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/list_install_components.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/install.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/install/local.dir
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm/CMakeFiles/install/strip.dir
