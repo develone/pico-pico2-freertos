@@ -1,5 +1,0 @@
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm-install/pioasm/pioasm
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm-install/pioasm/pioasmTargets.cmake
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm-install/pioasm/pioasmTargets-release.cmake
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm-install/pioasm/pioasmConfig.cmake
-/home/devel/rp2040-rp2350-freertos/build-2350/pioasm-install/pioasm/pioasmConfigVersion.cmake
