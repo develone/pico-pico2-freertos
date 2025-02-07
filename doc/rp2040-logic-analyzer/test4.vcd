@@ -1,0 +1,20 @@
+$date Sept 10 2008 12:00:05 $end
+$version Example Simulator V0.1 $end
+$timescale 1 ns $end
+$scope module pico $end
+$var wire 8 ! data $end
+ 
+$upscope $end
+$enddefinitions $end
+#0
+b00000001 !
+ 
+#30
+b01000001 !
+#40
+b00000001 !
+#50
+b01000001 !
+
+
+

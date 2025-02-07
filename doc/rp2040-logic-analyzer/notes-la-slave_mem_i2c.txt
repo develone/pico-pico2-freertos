@@ -1,0 +1,251 @@
+06/26/23
+Write at 0x00: 'Hello, I2C slave! - 0x00'
+Read  at 0x00: 'Hello'
+Read  at 0x05: ', I2C slave! - 0x00'
+
+Write at 0x20: 'Hello, I2C slave! - 0x20'
+Read  at 0x20: 'Hello'
+Read  at 0x25: ', I2C slave! - 0x20'
+
+Write at 0x40: 'Hello, I2C slave! - 0x40'
+Read  at 0x40: 'Hello'
+Read  at 0x45: ', I2C slave! - 0x40'
+
+Write at 0x60: 'Hello, I2C slave! - 0x60'
+Read  at 0x60: 'Hello'
+Read  at 0x65: ', I2C slave! - 0x60'
+
+Write at 0x80: 'Hello, I2C slave! - 0x80'
+Read  at 0x80: 'Hello'
+Read  at 0x85: ', I2C slave! - 0x80'
+
+Write at 0xA0: 'Hello, I2C slave! - 0xA0'
+Read  at 0xA0: 'Hello'
+Read  at 0xA5: ', I2C slave! - 0xA0'
+
+Write at 0xC0: 'Hello, I2C slave! - 0xC0'
+Read  at 0xC0: 'Hello'
+Read  at 0xC5: ', I2C slave! - 0xC0'
+
+Write at 0xE0: 'Hello, I2C slave! - 0xE0'
+Read  at 0xE0: 'Hello'
+Read  at 0xE5: ', I2C slave! - 0xE0'
+
+Write et number
+t 0xC0: 'Hello, I2C slave! - 0xC0'
+Read  at 0xC0: 'Hello'
+Read  at 0xC5: ', I2C slave! - 0xC0'
+
+Write at 0xE0: 'Hello, I2C slave! - 0xE0'
+Read  at 0xE0: 'Hello'
+Read  at 0xE5: ', I2C slave! - 0xE0'
+
+06/21/23
+
+This is one pico running pico-examples/i2c/slave_mem_i2c/slave_mem_i2c.c and a 
+2nd pico running rp2040-freertos-project/rp2040-logic-analyzer/rp2040-logic-analyzer.c.
+The repo https://github.com/develone/rp2040-freertos-project dev branch provides both the
+programs needed.  In addition https://github.com/develone/generate-vcd/blob/master/sample/4ch.c
+compiled with the command "gcc 4ch.c -o 4ch".  This is used to convert the output from the
+rp2040-logic-analyzer into a vcd file.  It also requires 
+https://github.com/develone/generate-vcd/blob/master/sample/4ch_header.vcd.
+
+
+The dev branch is used to https://github.com/develone/rp2040-freertos-project/tree/
+dev/rp2040-logic-analyzer to create rp2040-logic-analyzer.uf2 or
+rp2040-logic-analyzer.elf and slave_mem_i2c.elf which is loaded with exe-slave_mem_i2c.sh
+
+git clone --recursive https://github.com/develone/rp2040-freertos-project.git -b dev
+Cloning into 'rp2040-freertos-project'...
+remote: Enumerating objects: 2053, done.
+remote: Counting objects: 100% (233/233), done.
+remote: Compressing objects: 100% (122/122), done.
+remote: Total 2053 (delta 115), reused 224 (delta 106), pack-reused 1820
+Receiving objects: 100% (2053/2053), 116.01 MiB | 19.49 MiB/s, done.
+Resolving deltas: 100% (930/930), done.
+Updating files: 100% (306/306), done.
+Submodule 'freertos/FreeRTOS-Kernel' (https://github.com/FreeRTOS/FreeRTOS-Kernel) registered for path 'freertos/FreeRTOS-Kernel'
+Cloning into '/home/devel/testing/rp2040-freertos-project/freertos/FreeRTOS-Kernel'...
+remote: Enumerating objects: 165832, done.        
+remote: Counting objects: 100% (724/724), done.        
+remote: Compressing objects: 100% (389/389), done.        
+remote: Total 165832 (delta 319), reused 641 (delta 266), pack-reused 165108        
+Receiving objects: 100% (165832/165832), 111.45 MiB | 8.84 MiB/s, done.
+Resolving deltas: 100% (118821/118821), done.
+Submodule path 'freertos/FreeRTOS-Kernel': checked out '990643ebe8c990dd3672a52079d274e7685df980'
+Submodule 'ThirdParty/FreeRTOS-Kernel-Community-Supported-Ports' (https://github.com/FreeRTOS/FreeRTOS-Kernel-Community-Supported-Ports) registered for path 'freertos/FreeRTOS-Kernel/portable/ThirdParty/Community-Supported-Ports'
+Submodule 'ThirdParty/FreeRTOS-Kernel-Partner-Supported-Ports' (https://github.com/FreeRTOS/FreeRTOS-Kernel-Partner-Supported-Ports) registered for path 'freertos/FreeRTOS-Kernel/portable/ThirdParty/Partner-Supported-Ports'
+Cloning into '/home/devel/testing/rp2040-freertos-project/freertos/FreeRTOS-Kernel/portable/ThirdParty/Community-Supported-Ports'...
+remote: Enumerating objects: 76, done.        
+remote: Counting objects: 100% (76/76), done.        
+remote: Compressing objects: 100% (53/53), done.        
+remote: Total 76 (delta 21), reused 62 (delta 16), pack-reused 0        
+Receiving objects: 100% (76/76), 45.44 KiB | 762.00 KiB/s, done.
+Resolving deltas: 100% (21/21), done.
+Cloning into '/home/devel/testing/rp2040-freertos-project/freertos/FreeRTOS-Kernel/portable/ThirdParty/Partner-Supported-Ports'...
+remote: Enumerating objects: 50, done.        
+remote: Counting objects: 100% (50/50), done.        
+remote: Compressing objects: 100% (38/38), done.        
+remote: Total 50 (delta 17), reused 39 (delta 12), pack-reused 0        
+Receiving objects: 100% (50/50), 32.51 KiB | 693.00 KiB/s, done.
+Resolving deltas: 100% (17/17), done.
+Submodule path 'freertos/FreeRTOS-Kernel/portable/ThirdParty/Community-Supported-Ports': checked out 'f0618d9e2f4c5b0a3e472a2673a090e8ef836258'
+Submodule path 'freertos/FreeRTOS-Kernel/portable/ThirdParty/Partner-Supported-Ports': checked out '3f9c99a682c5c796bb7eb89fd9c4385688fce27a'
+
+mkdir build
+
+cd build
+
+cmake -DPICO_BOARD=pico DFREERTOS_KERNEL_PATH:PATH=../freertos/FreeRTOS-Kernel ..
+
+Using PICO_SDK_PATH from environment ('/home/devel/sdk/pico-sdk')
+PICO_SDK_PATH is /home/devel/sdk/pico-sdk
+Defaulting PICO_PLATFORM to rp2040 since not specified.
+Defaulting PICO platform compiler to pico_arm_gcc since not specified.
+-- Defaulting build type to 'Release' since not specified.
+PICO compiler is pico_arm_gcc
+-- The C compiler identification is GNU 8.3.1
+-- The CXX compiler identification is GNU 8.3.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/arm-none-eabi-gcc
+Build type is Release
+PICO target board is pico.
+Using board configuration from /home/devel/sdk/pico-sdk/src/boards/include/boards/pico.h
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.2") found components: Interpreter 
+TinyUSB available at /home/devel/sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
+BTstack available at /home/devel/sdk/pico-sdk/lib/btstack
+cyw43-driver available at /home/devel/sdk/pico-sdk/lib/cyw43-driver
+Pico W Bluetooth build support available.
+lwIP available at /home/devel/sdk/pico-sdk/lib/lwip
+mbedtls available at /home/devel/sdk/pico-sdk/lib/mbedtls
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/devel/testing/rp2040-freertos-project/buid
+
+make
+
+exe-slave_mem_i2c.sh uses openocd to load the pico with a master slave i2c.
+#!/bin/bash
+openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program i2c/slave_mem_i2c/slave_mem_i2c.elf verify reset exit"
+
+rp2040-logic-analyzer.uf2 privides a logic-analyzer.
+ 
+Welcome to minicom 2.8/devel
+
+OPTIONS: I18n 
+Port /dev/ttyACM0, 06:18:11
+
+Press CTRL-A Z for help on special keys
+
+p17
+Start pin is 17
+n4
+Total pins is 4
+s250000
+Sample number is 250000
+f1000000
+Frequency is 1000000 div is 125.000000
+t0
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/ttyACM0, 06:18:11
+
+Press CTRL-A Z for help on special keys
+
+p17
+Start pin is 17
+n4
+Total pins is 4
+s250000
+Sample number is 250000
+f1000000
+Frequency is 1000000 div is 125.000000
+t0
+Trigger set to 0
+
+CtrlAL
+Capture to which file?
+> 4ch.csv
+
+CtrlAL
+Capture file
+Close
+
+CtrlAX
+Leave Minicom?
+Yes
+
+vi 4ch.csv
+g
+Clock speed is   125000000
+Capture speed is 1000000.000000.2
+Arming trigger
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+1,0,0,0,
+1,0,0,0,
+1,0,0,0,
+1,0,0,0,
+1,0,0,0,
+0,0,0,0,
+0,0,0,0,
+	.
+	.
+	.
+1,1,0,0,
+1,1,0,0,
+1,1,0,0,
+1,1,0,0,
+1,1,0,0,
+1,1,0,0,
+
+Esc:1,$ s/0,0,0,0,/0,0,0,0/g
+2413 substitutions on 2413 lines
+
+Esc:1,$ s/0,1,0,0,/0,1,0,0/g
+1150 substitutions on 1150 lines
+
+Esc:1,$ s/1,1,0,0,/1,1,0,0/g
+245049 substitutions on 245049 lines
+
+Esc:1,$ s/1,0,0,0,/1,0,0,0/g
+1388 substitutions on 1388 lines
+
+verify that all of the "," are removed
+
+1G
+Delete 
+g
+Clock speed is   125000000
+Capture speed is 1000000.000000.2
+Arming trigger
+with 4dd
+Esc:wq
+
+devel@pi4-ultibo:~ $ ./4ch > xx
+
+devel@pi4-ultibo:~ $ cat generate-vcd/sample/4ch_header.vcd xx > test5.vcd
+
+
+// For this example, we run both the master and slave from the same board.
+// You'll need to wire pin GP4 to GP6 (SDA), and pin GP5 to GP7 (SCL).
+
+devel@pi4-50:~/pico-examples/build $ openocd -f interface/raspberrypi-swd.cfg 
+-f target/rp2040.cfg -c "program i2c/slave_mem_i2c/slave_mem_i2c.elf verify 
+reset exit"
