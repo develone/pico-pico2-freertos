@@ -1,0 +1,45 @@
+git clone https://github.com/develone/pico-sdk.git -b my-2.1.1
+cd ~/pico2/pico-sdk
+git submodule update --init
+devel@pi5-90:~/pico2/BUILT_PICOTOOL/picotool/
+git pull
+
+devel@pi5-90:~/pico2/BUILT_PICOTOOL/picotool/build 
+make clean
+make
+sudo make install
+[  0%] Performing build step for 'xip_ram_perms'
+[  0%] No install step for 'xip_ram_perms'
+[  1%] Completed 'xip_ram_perms'
+[  6%] Built target xip_ram_perms
+[  7%] Performing build step for 'flash_id'
+[  8%] No install step for 'flash_id'
+[  8%] Completed 'flash_id'
+[ 11%] Built target flash_id
+[ 12%] Performing build step for 'otp_header_parser'
+[100%] Built target otp_header_parse
+[ 13%] No install step for 'otp_header_parser'
+[ 13%] Completed 'otp_header_parser'
+[ 16%] Built target otp_header_parser
+[ 70%] Built target mbedcrypto
+[ 77%] Built target mbedx509
+[ 85%] Built target mbedtls
+[ 87%] Built target errors
+[ 88%] Built target elf
+[ 90%] Built target bintool
+[ 91%] Built target generate_otp_header
+[ 93%] Built target binary_data
+[ 94%] Built target elf2uf2
+[100%] Built target picotool
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /usr/local/bin/picotool
+-- Up-to-date: /usr/local/lib/cmake/picotool/picotoolTargets.cmake
+-- Up-to-date: /usr/local/lib/cmake/picotool/picotoolTargets-release.cmake
+-- Up-to-date: /usr/local/lib/cmake/picotool/picotoolConfig.cmake
+-- Installing: /usr/local/lib/cmake/picotool/picotoolConfigVersion.cmake
+-- Installing: /usr/local/share/picotool/rp2350_otp_contents.json
+-- Up-to-date: /usr/local/share/picotool/xip_ram_perms.elf
+cd pico-pico2-freerrtos
+./compile-rp2040.sh
+./compile-rp2350.sh
